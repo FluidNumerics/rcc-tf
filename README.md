@@ -1,0 +1,68 @@
+# Research Computing Cloud (RCC) - Terraform Module
+Copyright 2021 Fluid Numerics LLC
+
+## About
+The Research Computing Cloud (RCC) Terraform Module is infrastructure-as-code that will quickly get you started with a complete HPC/RC cluster on Google Cloud. Features of this deployment include:
+* Slurm job scheduler hosted on a controller instance
+* Multiple login nodes
+* Multi-region, multi-zone compute partitions
+* (Optional) Cloud SQL Slurm Database
+* (Optional) Lustre file system  (mounts to `/mnt/lustre`)
+* (Optional) NFS Filestore file system  (mounts to `/mnt/filestore`)
+
+We recommend that you use this infrastructure as code with Fluid Numerics' RCC VM Image Library image families.
+
+Publicly available and supported images include
+* [`projects/fluid-cluster-ops/global/images/family/rcc-centos-7-v3`]()
+* [`projects/fluid-cluster-ops/global/images/family/rcc-ubuntu-2004-v3`]()
+* [`projects/fluid-cluster-ops/global/images/family/rcc-debian-10-v3`]()
+These use of these images are subject to the terms of [Fluid Numerics' RCC EULA]()
+
+## Quick Start
+
+### Deploy your cluster
+1. [Navigate to Google Cloud Shell](https://shell.cloud.google.com/?show=terminal)
+2. Clone this repository
+```
+git clone https://github.com/fluidnumerics/rcc-tf ~/rcc-tf
+```
+3. Set your project ID, replacing `PROJECT-ID` with your Google Cloud project ID
+```
+gcloud config set project PROJECT-ID
+```
+4. (Optional) Enable Lustre parallel file system
+```
+export USE_LUSTRE=true
+```
+5. (Optional) Enable Filestore
+```
+export USE_FILESTORE=true
+```
+6. (Optional) Enable CloudSQL for Slurm database
+```
+export USE_CLOUDSQL=true
+```
+7. Create a terraform plan
+```
+cd ~/rcc-tf/
+make plan
+```
+8. Deploy you're infrastructure when ready
+```
+make apply
+```
+
+### Tear down your cluster
+When you're done using your cluster, you can tear down resources to avoid accruing additional costs on Google Cloud.
+1. [Navigate to Google Cloud Shell](https://shell.cloud.google.com/?show=terminal)
+2. Navigate to the `~/rcc-tf/` directory
+```
+cd ~/rcc-tf/
+```
+3. Delete your infrastructure
+make destroy
+```
+
+
+## Reporting Issues
+

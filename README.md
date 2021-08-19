@@ -16,7 +16,9 @@ Publicly available and supported images include
 * [`projects/fluid-cluster-ops/global/images/family/rcc-centos-7-v3`]()
 * [`projects/fluid-cluster-ops/global/images/family/rcc-ubuntu-2004-v3`]()
 * [`projects/fluid-cluster-ops/global/images/family/rcc-debian-10-v3`]()
-These use of these images are subject to the terms of [Fluid Numerics' RCC EULA]()
+
+
+The use of these images are subject to the terms of [Fluid Numerics' RCC EULA]()
 
 ## Quick Start
 
@@ -63,6 +65,8 @@ cd ~/rcc-tf/
 make destroy
 ```
 
+### Dive Deeper
+You can learn more about configuring your cluster at the rcc-tf readthedocs.
 
 ## Reporting Issues
-
+You can [report any issues associated with the rcc-tf repository using our issue tracker](https://github.com/FluidNumerics/rcc-tf/issues/new)

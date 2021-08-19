@@ -62,6 +62,7 @@ When you're done using your cluster, you can tear down resources to avoid accrui
 cd ~/rcc-tf/
 ```
 3. Delete your infrastructure
+```
 make destroy
 ```
 

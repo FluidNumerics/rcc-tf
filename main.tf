@@ -112,7 +112,7 @@ module "lustre_gcp" {
   project = var.lustre.project == null ? var.project : var.lustre.project 
   zone = var.lustre.zone == null ? var.zone : var.lustre.zone 
   vpc_subnet = var.lustre.vpc_subnet == null ? module.slurm_cluster_network.subnet_depend : var.lustre.vpc_subnet 
-  service_account = var.lustre.vpc_subnet 
+  service_account = var.lustre.service_account 
   network_tags = var.lustre.network_tags
   cluster_name = var.lustre.name
   fs_name = var.lustre.fs_name

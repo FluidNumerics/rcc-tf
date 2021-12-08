@@ -72,7 +72,7 @@ variable "controller_disk_type" {
 variable "controller_image" {
   description = "Slurm image to use for the controller instance"
   type        = string
-  default     = null
+  default     = "projects/research-computing-cloud/images/family/rcc-centos-foss"
 }
 
 variable "controller_instance_template" {
@@ -151,7 +151,7 @@ variable "login_disk_size_gb" {
 variable "login_image" {
   description = "Slurm image to use for login instances"
   type        = string
-  default     = null
+  default     = "projects/research-computing-cloud/images/family/rcc-centos-foss"
 }
 
 variable "login_instance_template" {
@@ -342,6 +342,7 @@ variable "create_lustre" {
 }
 variable "lustre" {
   type = object({
+    local_mount = string
     image = string
     project = string
     zone = string
@@ -370,6 +371,7 @@ variable "lustre" {
     hsm_gcs_prefix = string
   })
   default = {
+    local_mount = "/mnt/lustre"
     image = "projects/research-computing-cloud/global/images/family/lustre"
     project = null
     zone = null

@@ -159,14 +159,14 @@ resource "google_filestore_instance" "nfs" {
 locals {
   lustre_storage = var.create_lustre ? [{ server_ip = module.lustre_gcp.server_ip
                                           remote_mount = "/${var.lustre.fs_name}"
-                                          local_mount = "/mnt/lustre"
+                                          local_mount = var.lustre.local_mount
                                           fs_type = "lustre"
                                           mount_options = "defaults,_netdev"
                                         }] : []
 
   filestore_storage = var.create_filestore ? [{ server_ip = google_filestore_instance.nfs[0].name
                                                 remote_mount = "/${var.filestore.fs_name}"
-                                                local_mount = "/mnt/filestore"
+                                                local_mount = var.filestore.local_mount
                                                 fs_type = "nfs"
                                                 mount_options = "defaults,_netdev"
                                               }] : []

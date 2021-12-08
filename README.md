@@ -12,11 +12,23 @@ The Research Computing Cloud (RCC) Terraform Module is infrastructure-as-code th
 
 We recommend that you use this infrastructure as code with Fluid Numerics' RCC VM Image Library image families.
 
-Publicly available and supported images include
+
+## Images
+
+### Free Images
+Fluid Numerics makes some VM images available for free. These images provide a good starting point, but do not grant you access to support from Fluid Numerics.
+* [`projects/research-computing-cloud/images/family/rcc-centos-foss`]()
+* [`projects/research-computing-cloud/images/family/rcc-debian-foss`]()
+* [`projects/research-computing-cloud/images/family/rcc-ubuntu-foss`]()
+
+
+### Supported Images
+If you would like to obtain support from Fluid Numerics for using this solution, you can use the following VM Images :
 * [`projects/fluid-cluster-ops/global/images/family/rcc-centos-7-v3`]()
 * [`projects/fluid-cluster-ops/global/images/family/rcc-ubuntu-2004-v3`]()
 * [`projects/fluid-cluster-ops/global/images/family/rcc-debian-10-v3`]()
 
+Use of these images incurs a licensing fee of $0.01 USD/vCPU/hour and $0.09 USD/GPU/hour. If you are interested in obtaining a different usage-based pricing model for support, reach out to support@fluidnumerics.com.
 
 The use of these images are subject to the terms of [Fluid Numerics' RCC EULA]()
 

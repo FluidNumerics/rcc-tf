@@ -77,11 +77,13 @@ filestore = { name = "filestore"
               capacity_gb = 2048
               fs_name = "nfs"
               network = null
+              local_mount = "/mnt/filestore"
             }
 
 # ** Uncomment to add lustre file system ** #
 #create_lustre = true
-lustre = { image = "projects/research-computing-cloud/global/images/family/lustre"
+lustre = { local_mount = "/mnt/lustre"
+           image = "projects/research-computing-cloud/global/images/family/lustre"
            project = null
            zone = null
            vpc_subnet = null

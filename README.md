@@ -27,6 +27,7 @@ If you would like to obtain support from Fluid Numerics for using this solution,
 * [`projects/fluid-cluster-ops/global/images/family/rcc-centos-7-v3`]()
 * [`projects/fluid-cluster-ops/global/images/family/rcc-ubuntu-2004-v3`]()
 * [`projects/fluid-cluster-ops/global/images/family/rcc-debian-10-v3`]()
+* [`projects/fluid-cluster-ops/global/images/family/rcc-rocky-`]()
 
 Use of these images incurs a licensing fee of $0.01 USD/vCPU/hour and $0.09 USD/GPU/hour. If you are interested in obtaining a different usage-based pricing model for support, reach out to support@fluidnumerics.com.
 
@@ -82,4 +83,4 @@ make destroy
 You can learn more about configuring your cluster at the rcc-tf readthedocs.
 
 ## Reporting Issues
-You can [report any issues associated with the rcc-tf repository using our issue tracker](https://github.com/FluidNumerics/rcc-tf/issues/new)
+You can [report any issues associated with the rcc-tf repository using our issue tracker](https://octoskelo.atlassian.net/servicedesk/customer/portal/1/create/150)

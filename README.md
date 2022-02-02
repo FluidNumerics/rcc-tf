@@ -80,7 +80,7 @@ make destroy
 ```
 
 ### Dive Deeper
-You can learn more about configuring your cluster at the rcc-tf readthedocs.
+You can [You can learn more about configuring your cluster at the research-computing-cluster readthedocs](https://research-computing-cluster.readthedocs.io/en/latest/QuickStart/deploy_with_terraform.html).
 
 ## Reporting Issues
 You can [report any issues associated with the rcc-tf repository using our issue tracker](https://octoskelo.atlassian.net/servicedesk/customer/portal/1/create/150)

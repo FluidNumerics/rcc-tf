@@ -311,7 +311,7 @@ output "config" {
 }
 
 output "network_name" {
-  value = module.slurm_cluster_network.google_compute_network.cluster_network[0].name
+  value = module.slurm_cluster_network.network_name
 }
 
 variable "create_filestore" {

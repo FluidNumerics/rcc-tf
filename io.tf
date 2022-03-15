@@ -310,6 +310,10 @@ output "config" {
   sensitive = true
 }
 
+output "network_name" {
+  value = module.slurm_cluster_network.google_compute_network.cluster_network[0].name
+}
+
 variable "create_filestore" {
   type = bool
   description = "Boolean for controlling filestore creation (useful for optional modules)"

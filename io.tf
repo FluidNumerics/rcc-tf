@@ -325,6 +325,7 @@ variable "filestore" {
     name = string
     zone = string
     tier = string
+    local_mount = string
     capacity_gb = number
     fs_name = string
     network = string
@@ -335,6 +336,7 @@ variable "filestore" {
     tier = "PREMIUM"
     capacity_gb = 2048
     fs_name = "nfs"
+    local_mount = "/mnt/filestore"
     network = null
   }
 }
